@@ -1,0 +1,17 @@
+apply plugin: 'android'
+
+android {
+  compileSdkVersion 19
+  buildToolsVersion "19"
+
+  defaultConfig {
+    minSdkVersion 19
+    targetSdkVersion 19
+  }
+}
+
+dependencies {
+  compile project(':modules:model')
+  compile project(':modules:circle')
+  compile project(':core-library')
+}

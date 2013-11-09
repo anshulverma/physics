@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+compileJava {
+  sourceCompatibility = 1.6
+  targetCompatibility = 1.6
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'org.roboguice:roboguice:2.0'
+  compile 'com.google.guava:guava:15.0'
+}

@@ -1,0 +1,6 @@
+include ':app', ':core-library'
+
+include ':modules:model', ':modules:circle'
+//project(':modules').projectDir = new File(settingsDir, 'modules')
+//project(':modules:model').projectDir = new File(settingsDir, 'modules/model')
+//project(':modules:circle').projectDir = new File(settingsDir, 'modules/circle')

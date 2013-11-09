@@ -1,0 +1,27 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:0.6.+'
+  }
+}
+
+apply plugin: 'android-library'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 19
+    }
+}
+
+dependencies {
+  compile project(':modules:model')
+  compile project(':modules:circle')
+  compile 'org.roboguice:roboguice:2.0'
+  compile 'com.google.guava:guava:15.0'
+}

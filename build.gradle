@@ -1,0 +1,29 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:0.6.+'
+  }
+}
+
+allprojects {
+  version = '1.0'
+
+  repositories {
+    mavenCentral()
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+dependencies {
+//  compile fileTree(dir: 'lib', includes: ['*.jar'])
+  compile 'com.google.code.findbugs:jsr305:2.0.2'
+
+  compile project(':modules:model')
+  compile project(':modules:circle')
+  compile project(':core-library')
+  compile project(':app')
+}
