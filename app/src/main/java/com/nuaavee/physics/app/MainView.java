@@ -16,7 +16,7 @@ public class MainView extends View {
 
   public MainView(Context context) {
     super(context);
-    shell = InjectorHelper.getInstance(Shell.class);
+    shell = InjectorHelper.getInstance(Shell.class, context);
     shell.activate();
   }
 

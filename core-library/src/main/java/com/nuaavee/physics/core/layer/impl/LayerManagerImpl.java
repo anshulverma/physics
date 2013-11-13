@@ -5,11 +5,13 @@ package com.nuaavee.physics.core.layer.impl;
 import com.google.common.collect.Lists;
 import com.nuaavee.physics.core.layer.LayerManager;
 import com.nuaavee.physics.model.layer.Layer;
+import roboguice.inject.ContextSingleton;
 import java.util.List;
 
 /**
  * @author Adobe Systems Inc
  */
+@ContextSingleton
 public class LayerManagerImpl implements LayerManager {
 
   private final List<Layer> layers = Lists.newArrayList();

@@ -1,11 +1,12 @@
 package com.nuaavee.physics.core;
 
+import android.content.Context;
 import com.google.common.collect.ImmutableList;
-import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
 import com.nuaavee.physics.circle.CircleModule;
 import com.nuaavee.physics.model.ModelModule;
+import roboguice.RoboGuice;
 import java.util.List;
 
 /**
@@ -23,15 +24,15 @@ public final class InjectorHelper {
 
   private InjectorHelper() { }
 
-  public static Injector getInjector() {
+  public static Injector getInjector(Context context) {
     if (injector == null) {
-      injector = Guice.createInjector(MODULES);
+      injector = RoboGuice.getInjector(context).createChildInjector(MODULES);
     }
     return injector;
   }
 
-  public static <T> T getInstance(Class<T> type) {
-    return getInjector().getInstance(type);
+  public static <T> T getInstance(Class<T> type, Context context) {
+    return getInjector(context).getInstance(type);
   }
 
 }

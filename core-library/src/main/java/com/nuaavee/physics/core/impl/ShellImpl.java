@@ -16,10 +16,12 @@ import com.nuaavee.physics.model.action.listener.PhysicalObjectActionListener;
 import com.nuaavee.physics.model.layer.BackgroundLayer;
 import com.nuaavee.physics.model.layer.DaynamicLayer;
 import com.nuaavee.physics.model.layer.Layer;
+import roboguice.inject.ContextSingleton;
 
 /**
  * @author nuaavee
  */
+@ContextSingleton
 public class ShellImpl implements Shell {
 
   private final LayerManager layerManager;

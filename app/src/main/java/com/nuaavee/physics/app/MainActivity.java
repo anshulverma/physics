@@ -1,19 +1,28 @@
 package com.nuaavee.physics.app;
 
-import android.app.Activity;
 import android.os.Bundle;
+import com.google.inject.Inject;
+import com.nuaavee.physics.core.InjectorHelper;
+import com.nuaavee.physics.core.Shell;
+import roboguice.activity.RoboActivity;
 
 /**
  * @author nuaavee
  */
-public class MainActivity extends Activity {
+public class MainActivity extends RoboActivity {
+
+  @Inject private Shell shell;
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     MainView mainView = new MainView(this);
     setContentView(mainView);
+    shell = InjectorHelper.getInstance(Shell.class, this);
+    shell.activate();
   }
+
+  draw
 
 //  DrawingView dv ;
 //  private Paint mPaint;

@@ -8,10 +8,12 @@ import com.nuaavee.physics.core.EventProcessor;
 import com.nuaavee.physics.core.layer.LayerManager;
 import com.nuaavee.physics.model.action.ActionEvent;
 import com.nuaavee.physics.model.action.Actionable;
+import roboguice.inject.ContextSingleton;
 
 /**
  * @author Adobe Systems Inc
  */
+@ContextSingleton
 public class EventProcessorImpl implements EventProcessor {
 
   private final LayerManager layerManager;
